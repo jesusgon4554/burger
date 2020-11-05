@@ -8,11 +8,13 @@
             <br/>
         {{/unless}}
     {{/each}}
+    {{burger_name}}
 </ul>
 
 <h2>YOU ATE ALL THESE BURGERS!!</h2>
 
 <ul>
+    {{devoured}}
     {{#each burgers}}
         {{#if this.devoured}}
             Burgers : {{this.burger_name }}

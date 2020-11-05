@@ -1,7 +1,7 @@
 body{
-    background-image: url("/public/img/burger.jpg");
+    background-image: url("/img/burger.jpg");
+    background-size: cover;
 }
-
 
 li {
     padding: 5px;
