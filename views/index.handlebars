@@ -1,23 +1,27 @@
 <h1>EAT-DA-BURGER</h1>
 
-<h2>Dont let these burgers go to waste!!</h2>>
-    <ul>
-        {{#each burger}}
-            {{#unless devoured}}
-                {{> burger/burger-block devoured=true}}
-            {{/unless}}
-        {{/each}}
-    </ul>
+<h2>Dont let these burgers go to waste!!</h2>
+<ul>
+    <br />
+    <br />
+
+    {{#each burgers}}
+        {{#if this.devoured }}
+            Name : {{ this.burger_name }}
+            <br />
+        {{/if}}
+    {{/each}}
+</ul>
 
 <h2>YOU ATE ALL THESE BURGERS!!</h2>
 
-    <ul>
-        {{#each burger}}
-            {{#if devoured}}
-                {{>burger/burger-block devoured=false}}
-            {{/if}}
-        {{/each}}
-    </ul>
+<ul>
+    {{#each burger}}
+    {{#if devoured}}
+    {{>burger/burger-block devoured=false}}
+    {{/if}}
+    {{/each}}
+</ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">

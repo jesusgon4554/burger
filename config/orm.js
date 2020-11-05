@@ -34,7 +34,7 @@ let orm = {
     },
     //insert one
     create: function(table, cols, vals, cb){
-        let queryString = "INSERT INTO" + table;
+        let queryString = "INSERT INTO " + table;
 
         queryString += " (";
         queryString += cols.toString();

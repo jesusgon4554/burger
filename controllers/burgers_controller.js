@@ -6,21 +6,20 @@ const burger = require("../models/burger.js")
 //create router for app
 router.get("/", function(req, res) {
     burger.all(function(data){
-        let hbsObject = {
-            cats: data
-        };
-        console.log(hbsObject);
-        res.render("index", hbsObject);
+     
+        console.log(data);
+        res.render("index", {  burgers : data, stringify : JSON.stringify(data) });
     });
 });
 
 router.post("/api/burger", function(req, res){
     burger.create([
-        "name", "devoured"
+        "burger_name", "devoured"
     ], [
-        req.body.name, req.body.devoured
+        String(req.body.name), Boolean(req.body.devoured)
     ], function(result) {
-        res.json({ id: result.insertId });
+        res.redirect('/')
+        //res.json({ id: result.insertId });
     });
 });
 

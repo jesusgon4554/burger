@@ -5,7 +5,7 @@ var PORT = process.env.PORT || 8080;
 var app = express();
 
 //public directory in application
-app.use(express.static("public"));
+app.use(express.static( __dirname + "/public"));
 
 //parse application body
 app.use(express.urlencoded({ extended: true }));
