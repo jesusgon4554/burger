@@ -2,10 +2,14 @@
 
 <h2>Dont let these burgers go to waste!!</h2>
 <ul>
-    {{devoured}}
+ 
     {{#each burgers}}
         {{#if this.devoured }}
             Burgers : {{ this.burger_name }}
+            {{!-- {{> burgers/burger-block devoured=false}} --}}
+                <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{true}}">
+                    {{#if devoured}}Devour!{{else}}More{{/if}}
+                </button>
             <br/>
         {{/if}}
     {{/each}}
@@ -19,6 +23,7 @@
     {{#each burgers}}
         {{#unless this.devoured}}
             Burgers : {{this.burger_name }}
+           {{!-- {{> partials/burger-block devoured=true}} --}}
         <br/>
         {{/unless}}
     {{/each}}

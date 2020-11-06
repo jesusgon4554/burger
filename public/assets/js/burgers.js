@@ -7,13 +7,13 @@ $(function() {
       var newdevoured = $(this).data("newdevoured");
   
       var newdevouredState = {
-        devoured: newdevoured
+        devoured: false
       };
   
       // Send the PUT request.
       $.ajax("/api/burger/" + id, {
         type: "PUT",
-        data: newdevouredState
+        data: true
       }).then(
         function() {
           console.log("changed devoured to", newdevoured);
