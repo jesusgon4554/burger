@@ -2,17 +2,12 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
 
-    $.get( "/api", function( data ) {
-        console.log(data)
-      
-    });
-
     $(".change-devoured").on("click", function(event) {
       var id = $(this).data("id");
       var newdevoured = $(this).data("newdevoured");
   
       var newdevouredState = {
-        devouredy: newdevoured
+        devoured: newdevoured
       };
   
       // Send the PUT request.

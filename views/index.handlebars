@@ -2,24 +2,25 @@
 
 <h2>Dont let these burgers go to waste!!</h2>
 <ul>
+    {{devoured}}
     {{#each burgers}}
-        {{#unless this.devoured }}
+        {{#if this.devoured }}
             Burgers : {{ this.burger_name }}
             <br/>
-        {{/unless}}
+        {{/if}}
     {{/each}}
-    {{burger_name}}
+   
 </ul>
 
 <h2>YOU ATE ALL THESE BURGERS!!</h2>
 
 <ul>
-    {{devoured}}
+    
     {{#each burgers}}
-        {{#if this.devoured}}
+        {{#unless this.devoured}}
             Burgers : {{this.burger_name }}
         <br/>
-        {{/if}}
+        {{/unless}}
     {{/each}}
 </ul>
 
