@@ -1,9 +1,10 @@
 # burger
 
-#Description
+# Description
 An app to keep track of the burgers you have eaten and the ones you should eat next!
 
-#Technologies
+# Technologies
+
 *MySql
 *Express
 *Express-Handlebars
