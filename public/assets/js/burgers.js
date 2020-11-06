@@ -7,7 +7,7 @@ $(function() {
       var newdevoured = $(this).data("newdevoured");
   
       var newdevouredState = {
-        devoured: false
+        data: false
       };
   
       // Send the PUT request.
