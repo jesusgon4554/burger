@@ -1,8 +1,8 @@
 const express = require("express")
 
-var PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 8080;
 
-var app = express();
+const app = express();
 
 //public directory in application
 app.use(express.static( __dirname + "/public"));
@@ -12,13 +12,13 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 
 //set handlebars
-var exphbs = require("express-handlebars");
+const exphbs = require("express-handlebars");
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
 //import routes
-var routes = require("./controllers/burgers_controller");
+const routes = require("./controllers/burgers_controller");
 
 app.use(routes);
 

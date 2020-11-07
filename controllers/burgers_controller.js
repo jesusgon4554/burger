@@ -19,7 +19,7 @@ router.post("/api/burger", function(req, res){
         String(req.body.name), Boolean(req.body.devoured)
     ], function(result) {
         res.redirect('/')
-        //res.json({ id: result.insertId });
+        // res.json({ id: result.insertId });
     });
 });
 
@@ -29,7 +29,7 @@ router.put("/api/burger/:id", function(req, res){
     console.log("condition", condition);
 
     burger.update({
-        devoured: req.body.devoured
+        devoured: true
     }, condition, function(result) {
         if(result.changedRows == 0) {
             return res.status(404).end();
