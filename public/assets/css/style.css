@@ -33,6 +33,8 @@ h1 {
 
 button{
   border-radius: 15px;
+  background-color: rgb(233, 195, 161);
+  
 }
 
 input{
@@ -41,4 +43,14 @@ input{
 
 .container h1{
   color: black;
+  font-family: 'Indie Flower', cursive;
+}
+
+.container h2{
+  font-family: 'Balsamiq Sans', cursive;
+}
+
+.container p{
+  font-size: 25px;
+  font-family: 'Amatic SC', cursive;
 }

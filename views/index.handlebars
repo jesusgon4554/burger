@@ -9,9 +9,9 @@
             <input type="text" id="ca" name="burgerName">
         </div>
 
-        <button type="submit">Add a Burger</button>
+        <button type="submit">Add Burger</button>
     </form>
-    
+
     <div class="row">
         <div class="col-sm-6">
             <div class="panel panel-default">
@@ -20,10 +20,10 @@
                     <ul>
                         {{#each burgers}}
                             {{#if this.devoured }}
-                                Burgers : {{ this.burger_name }}
+                                <p>Burgers : {{ this.burger_name }}
                                 <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{true}}">
                                     {{#if devoured}}Devour!{{else}}More{{/if}}
-                                </button>
+                                </button></p>
                                 <br/>
                                 {{/if}}
                         {{/each}}
@@ -39,7 +39,7 @@
                     <ul>
                         {{#each burgers}}
                             {{#unless this.devoured}}
-                                Burgers : {{this.burger_name }}
+                                <p>Burgers : {{this.burger_name }}</p>
                                 <br/>
                             {{/unless}}
                         {{/each}}
