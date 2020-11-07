@@ -19,13 +19,13 @@
                 <div class="panel-body">
                     <ul>
                         {{#each burgers}}
-                            {{#if this.devoured }}
+                            {{#unless this.devoured}}
                                 <p>Burgers : {{ this.burger_name }}
                                 <button class="change-devoured" data-id="{{id}}" data-newdevoured="{{true}}">
-                                    {{#if devoured}}Devour!{{else}}More{{/if}}
+                                    {{#if devoured}}{{else}}DEVOUR{{/if}}
                                 </button></p>
                                 <br/>
-                                {{/if}}
+                                {{/unless}}
                         {{/each}}
                     </ul>
                 </div>
@@ -38,10 +38,10 @@
                 <div class="panel-body">
                     <ul>
                         {{#each burgers}}
-                            {{#unless this.devoured}}
+                            {{#if this.devoured}}
                                 <p>Burgers : {{this.burger_name }}</p>
                                 <br/>
-                            {{/unless}}
+                            {{/if}}
                         {{/each}}
                     </ul>
                 </div>    

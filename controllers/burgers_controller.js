@@ -16,10 +16,10 @@ router.post("/api/burger", function(req, res){
     burger.create([
         "burger_name", "devoured"
     ], [
-        String(req.body.name), Boolean(req.body.devoured)
+        String(req.body.name), Boolean(false)
     ], function(result) {
         res.redirect('/')
-        res.json({ id: result.insertId });
+        // res.json({ id: result.insertId });
     });
 });
 
